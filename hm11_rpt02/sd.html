@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+
+<head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8">
+    <title>hm11 : CSS3 advanced</title>
+    <style>
+            @keyframes bomb {
+            from {
+                font-size: 500%;
+            }
+
+            to {
+                font-size: 100%;
+            }
+        }
+
+        h3 {
+            animation-name: bomb;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        body{
+            background-color: antiquewhite
+        }
+        div {
+            position: absolute;
+        }
+
+        img {
+            position: absolute;
+        }
+
+        #spadeA {
+            z-index: -3;
+            left: 10px;
+            top: 20px;
+        }
+
+        #spade2 {
+            z-index: 2;
+            left: 40px;
+            top: 30px;
+        }
+
+        #spade3 {
+            z-index: 3;
+            left: 80px;
+            top: 40px;
+        }
+
+        }
+
+        div {
+
+            display: inline-block;
+            position: absolute;
+            /* 절대 배치 */
+            border: 1px solid lightgray;
+        }
+
+        #fixed2 {
+            position: fixed;
+            bottom: 400px;
+            right: 1600px;
+            width: 100px;
+            padding: 5px;
+            background: ;
+            color: black;
+        }
+
+        div>p1 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 20px;
+            width: 15px;
+            background: RED;
+        }
+
+        div>p2 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 20px;
+            width: 15px;
+            background: Blue;
+        }
+
+        div>p3 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 20px;
+            width: 15px;
+            background: green;
+        }
+
+        div>p4 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 20px;
+            width: 15px;
+            background: lightgreen;
+        }
+
+        div>p5 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 20px;
+            width: 15px;
+            background: lightblue;
+        }
+
+        div>p6 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 20px;
+            width: 15px;
+            background: pink;
+        }
+
+        div>p7 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 20px;
+            width: 15px;
+            background: lightgray;
+        }
+
+        div>p8 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 20px;
+            width: 15px;
+            background: red;
+        }
+
+        div>p9 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 20px;
+            width: 15px;
+            background: blue;
+        }
+
+        div>p0 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: 20px;
+            width: 15px;
+            background: green;
+        }
+
+        #fixed {
+            color: yellow
+        }
+
+        div#rotate {
+            transform: rotate(20deg);
+        }
+
+        div#skew {
+            transform: skew(0deg, -20deg);
+        }
+
+        div#translate {
+            transform: translateY(100px);
+        }
+
+        div#scale {
+            transform: scale(3, 1);
+        }
+
+        /* 마우스 올릴 때 추가 변환 */
+        div#rotate:hover {
+            transform: rotate(80deg);
+        }
+
+        div#skew:hover {
+            transform: skew(0deg, -60deg);
+        }
+
+        div#translate:hover {
+            transform: translate(50px, 100px);
+        }
+
+        div#scale:hover {
+            transform: scale(4, 2);
+        }
+
+        /* 마우스 누를 때 추가 변환 */
+        div#scale:active {
+            transform: scale(1, 5);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fixed2">
+        hm11, 안예찬
+    </div>
+    <h3>Merry Christmas! 입니다.</h3>
+    <hr>
+    <audio src="media/talesweaver2.mp3" autoplay controls></audio>
+    <p></p>
+    <span style="color:Yellow">
+
+        <div>
+
+
+            <img src="media/5.jpg" width="500" height="600" alt="크리스마스 트리">
+
+            <p style=""><img src="media/christmastree.png" width="500" height="400" alt="크리스마스 트리">
+                <img src="media/34.png" width="100" height="20" alt="크리스마스 트리">
+                <div id=scale>
+                    <p1 style="left:20px; top:450px"><strong>M</strong></p1>
+                </div>
+                <div id=scale>
+                    <p2 style="left:50px; top:450px"><strong>A</strong></p2>
+                </div>
+                <div id=scale>
+                    <p3 style="left:80px; top:450px"><strong>R</strong></p3>
+                </div>
+                <div id=scale>
+                    <p4 style="left:110px; top:450px"><strong>R</strong></p4>
+                </div>
+                <div id=scale>
+                    <p5 style="left:140px; top:450px"><strong>Y</strong></p5>
+                </div>
+                <div id=scale>
+                    <p6 style="left:20px; top:500px"><strong>X</strong></p6>
+                </div>
+                <div id=scale>
+                    <p7 style="left:50px; top:500px"><strong>--</strong></p7>
+                </div>
+                <div id=scale>
+                    <p8 style="left:80px; top:500px"><strong>M</strong></p8>
+                </div>
+                <div id=scale>
+                    <p9 style="left:110px; top:500px"><strong>A</strong></p9>
+                </div>
+                <div id=scale>
+                    <p0 style="left:140px; top:500px"><strong>S</strong></p0>
+                </div>
+            <hr>
+        
+        </div>
+
+    </span>
+
+
+</body></html>
