@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm11 : Javascript object</title>
+    <style></style>
+    <script>
+      var account = {
+owner : "안예찬 ", 
+code : "hm11",
+balance : 35000, 
+inquiry : function () { return this.balance; }, 
+deposit : function(money) { this.balance += money; }, 
+withdraw : function (money) {
+this.balance -= money;
+}
+};
+
+    </script>
+  </head>
+
+  <body>
+   
+    <h3>리터럴 표기법으로 사용자 객체 만들기</h3>
+    <hr />
+    <script>
+      document.write("account : ");
+      document.write(account.owner + ", ");
+      document.write(account.code + ", ");
+      document.write(account.balance + "<br>");
+
+      account.deposit(10000);
+      
+      document.write("10000원 저금 후 잔액은 " + account.inquiry() + "<br>");
+      account.withdraw(5000);
+      
+      document.write("5000원 인출 후 잔액은 " + account.inquiry() + "<br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm11 : Javascript object</title>
+    <style></style>
+    <script>
+      //리터럴 표기법으로 사용자 객체 만들기
+      var student = {
+      // 프로퍼티 생성 및 초기화
+      owner : "안예찬", // 계좌 주인
+      code : "hm11", // 계좌 코드
+      balance : 3.5, // 잔액 프로퍼티
+      phone : "010-2290-8578",
+      food : "치즈돈까스",
+      birth : "4月 21日",
+      born : "창원",
+      // 메소드 작성
+      inquiry : function () { return this.balance; }, // 잔금 조회
+      deposit : function(money) { this.balance += money; }, // 저금. money 만큼 저금
+      withdraw : function (money) { // 예금 인출, money는 인출하고자 하는 액수
+      // money가 balance보다 작다고 가정
+      this.balance -= money;
+      }
+    };
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>리터럴 표기법으로 사용자 객체 만들기</h3>
+    <hr />
+    <script>
+      document.write("student : ");
+      document.write(student.owner + ", ");
+      document.write("<strong>HTML 번호 = "+student.code + ", ");
+      document.write("성적 = "+student.balance + "<br>");
+      document.write("전화번호 = "+student.phone + "<br>");
+      
+      document.write("좋아하는 음식 = "+student.food+ "<br>");
+      
+      document.write("생일 = "+student.birth + "<br>");
+      
+      document.write("고향 = "+student.born + "<br>");
+
+      document.write("해당학기 평점평균이 1.5미만인자는 학사경고를 받는다 " + "<br>");
+      student.deposit(0.5); 
+      document.write("4 과목이 A를 받았을때 " + student.inquiry() + "<br>");
+      student.withdraw(0.5);
+      student.withdraw(0.5); 
+      document.write("3 과목이 A를 받고 1 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(0.5);
+      student.withdraw(1.5); 
+      document.write("2 과목이 A를 받고 2 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(1.5);
+      student.withdraw(2.5); 
+      document.write("1 과목이 A를 받고 3 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(2.5);
+      student.withdraw(0.5);
+      document.write("4 과목이 B를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(0.5);
+      student.withdraw(1.25);
+      document.write("3 과목이 B를 받고 1 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(1.25);
+      student.withdraw(2.5);
+      document.write("2 과목이 B를 받고 2 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(2.5);
+      student.withdraw(3.0);
+      document.write("1 과목이 B를 받고 3 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(3.0);
+      student.withdraw(1.0);
+      document.write("4 과목이 C를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(1.0);
+      student.withdraw(2.0);
+      document.write("3 과목이 C를 받고 1 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(2.0);
+      student.withdraw(2.5);
+      document.write("2 과목이 C를 받고 2 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(2.5);
+      student.withdraw(3.0);
+      document.write("1 과목이 C를 받고 3 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(3.0);
+      student.withdraw(2.5);
+      document.write("4 과목이 D를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(2.5);
+      student.withdraw(2.75);
+      document.write("3 과목이 D를 받고 1 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(2.75);
+      student.withdraw(3.0);
+      document.write("2 과목이 D를 받고 2 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(3.0);
+      student.withdraw(3.25);
+      document.write("1 과목이 D를 받고 3 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(3.25);
+      student.withdraw(3.5); 
+      document.write("4 과목이 F를 받았을때 " + student.inquiry() + "<br>");
+      student.deposit(3.5);
+    </script>
+  </body>
+</html>
