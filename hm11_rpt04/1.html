@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8">
+    <title>나의 아침는</title>
+    <style>
+        @keyframes textColorAnimation {
+            0% {
+                color: blue;
+            }
+
+            30% {
+                color: green;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        span {
+            animation-name: textColorAnimation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+    <script>
+        function change() {
+            var span = document.getElementById("mySpan");
+            span.style.color = "green"; // 글자 색 green
+            span.style.fontSize = "18px"; // 글자 크기는 30픽셀
+            span.style.display = "block"; // 블록 박스로 변경
+            span.style.width = "30em"; // 박스의 폭. 6 글자 크기
+            span.style.border = "3px dotted magenta"; // 3픽셀 점선 magenta 테두리
+            span.style.margin = "50px"; // 상하좌우 여백 20px
+            span.style.padding = "10px";
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h4>안예찬의 아침은</h4>
+    <hr>
+    <p style="color:blue">
+        <span id="mySpan" style="color:red">기본적으로 평일에는 누구나 그렇듯 아침에는 화수목이 일교시라 6시반 쯤 기상하여 씻고 아침을 먹거나 부족한 잠을 더자곤함니다
+            주말에는 보통 9시쯤일어나 해야되는 과제가 있다면 하거나 피시방을 가거나 <Strong><span>피시방</span></Strong>을 가거나 <Strong><span>피시방</span></Strong>을 가거나 함니다..</span>
+    </p>
+    <input type="button" value="스타일변경" onclick="change()">
+
+
+</body></html>

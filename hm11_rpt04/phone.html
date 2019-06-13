@@ -1,0 +1,43 @@
+    <!DOCTYPE html>
+    <!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+    <html>
+
+    <head>
+        <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+        <meta charset="utf-8">
+        <title>나의 번호는</title>
+        <style>
+            div {
+                display: inline-block;
+                padding: 5px;
+                color: white;
+                background: olivedrab;
+            }
+
+            div#translate {
+                transform: translateY(100px);
+            }
+
+            div#translate:hover {
+                transform: translate(50px, 100px);
+            }
+
+        </style>
+        <script>
+for(var size=10; size<=30; size+=3) { // 5씩 증가
+document.write("<span ");
+document.write("style='font-size:" + size + "px'>");
+document.write("안녕하세요");
+document.write("</span>");
+}
+</script>
+
+    </head>
+
+    <body>
+        <div id="translate">010-2290-8578</div>
+
+    </body>
+    </div>
+
+    </html>
